@@ -8,7 +8,7 @@ import {ProductService} from '../../Services/product.service'
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
- constructor(private productService : ProductService){
+ constructor(){
 
  }
 
