@@ -1,0 +1,21 @@
+
+.search {
+    padding: 8px 50px;
+     margin-top: 25px; 
+    height: 24px;
+    width: 598px;
+    border: 0px;
+    outline: none;
+  }
+
+  .buttonsearch{
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: honeydew;
+    border: 1px;
+}
+
+.buttonsearch:hover{
+  background-color: rgb(194, 204, 194);
+}

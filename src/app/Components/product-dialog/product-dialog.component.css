@@ -1,0 +1,54 @@
+.Content-Modifed{
+
+    margin: 50px;
+    display:  flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+
+.send-product {
+    width: 100%;
+    padding: 10px;
+    background-color: #5f9af3;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px   #008CBA ;
+    color :#f4f4f4;
+    padding: auto;
+    /* box-shadow: 5px 5px; */
+}
+
+.send-product:disabled{
+  background-color: #dcdee2;
+  color: #000;
+  font-size:medium;
+    font-weight: 200;
+}
+
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  title{
+    margin: 20px;
+  }
+  
+  .Container-title-dialog{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  }
+
+  .button-submit{
+   
+  }

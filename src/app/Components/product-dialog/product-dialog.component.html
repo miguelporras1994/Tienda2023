@@ -1,0 +1,40 @@
+
+<div class="Container-title-dialog">
+<h1   *ngIf ="edit == false"class="title">Crear Producto</h1>
+<h1   *ngIf ="edit == true"class="title"> Editar Producto</h1>
+</div>
+<div class="Content-Modifed">
+
+    
+
+
+<form  (ngSubmit)="eventForm()" #myForm="ngForm" class="example-form">
+
+
+    <mat-form-field  class="example-full-width">
+        <mat-label>Nombre Producto</mat-label>
+        <input matInput placeholder="Carro"  name="nameProduct"  required id="nameProduct" [(ngModel)]="cProduct.nameProduct">
+      </mat-form-field>
+      
+    <mat-form-field  class="example-full-width">
+        <mat-label>Precio</mat-label>
+        <input matInput placeholder="1.00" name="price"  required id="price" [(ngModel)]="cProduct.price">
+      </mat-form-field>
+      
+    <mat-form-field  class="example-full-width">
+        <mat-label>Descripcion</mat-label>
+        <input matInput placeholder="" name="discretion"  required id="discretion" [(ngModel)]="cProduct.discretion">
+      </mat-form-field>
+      
+    <mat-form-field  class="example-full-width">
+        <mat-label>Categoria</mat-label>
+        <input matInput placeholder=""  name="idCategory"  required id="idCategory" [(ngModel)]="cProduct.idCategory"/>
+      </mat-form-field>
+
+ 
+      <button  *ngIf ="edit == false"  [disabled]="myForm.invalid" type="submit" class="send-product"> Crear </button>
+      <button  *ngIf ="edit == true" [disabled]="myForm.invalid" type="submit" class="send-product"> Editar </button>
+  </form>
+    
+</div>
+

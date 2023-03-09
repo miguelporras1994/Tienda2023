@@ -1,0 +1,44 @@
+body {
+    background-color: #EBEBEB;
+    margin: 0;
+  }
+  
+  header {
+    /* background-color: #ffe600; */
+
+    background-color:    #008CBA;
+    display: flex;
+  }
+  
+  .Container {
+    width: 1200px;
+    margin: 0 auto;
+    display: inherit;
+    height: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    flex-wrap: inherit;
+  }
+  
+  .menu {
+    /* background-color: #ffe600; */
+    background-color:    #008CBA;
+    width: 1200px;
+    height: 92px;
+    display: flex;
+  }
+  
+  .logo {
+    height: 100px;
+    width: 130px;
+    margin: 0px 30px;
+  }
+  
+  .search {
+    padding: 8px 50px;
+    margin: 25px;
+    height: 24px;
+    width: 598px;
+    border: 0px;
+    outline: none;
+  }
