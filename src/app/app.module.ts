@@ -15,6 +15,9 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatInputModule,
     FormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    BrowserAnimationsModule
    
   ],
   providers: [

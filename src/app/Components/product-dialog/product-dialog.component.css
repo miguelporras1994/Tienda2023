@@ -1,4 +1,4 @@
-.Content-Modifed{
+/* .Content-Modifed{
 
     margin: 50px;
     display:  flex;
@@ -18,9 +18,9 @@
     border: 1px   #008CBA ;
     color :#f4f4f4;
     padding: auto;
-    /* box-shadow: 5px 5px; */
+    
 }
-
+/* 
 .send-product:disabled{
   background-color: #dcdee2;
   color: #000;
@@ -49,6 +49,4 @@
     margin-top: 5%;
   }
 
-  .button-submit{
-   
-  }
+   */ 

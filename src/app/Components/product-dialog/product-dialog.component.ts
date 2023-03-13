@@ -1,9 +1,12 @@
 import { Component, OnInit , Input, Inject} from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+// import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Product } from 'src/app/Models/Product.model';
 import {ProductService} from '../../Services/product.service'
+// import {CategoryService} from '../../Services/category.services'
+
 import { NgxSpinnerService } from 'ngx-spinner';
+// import { Category } from 'src/app/Models/Category.model';
 
 @Component({
   selector: 'app-product-dialog',
@@ -13,6 +16,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class ProductDialogComponent  implements OnInit {
 
   cProduct : Product  = new Product();
+  // ListCategory : Category[]   = []
 
   edit : boolean = false
 
@@ -31,9 +35,11 @@ export class ProductDialogComponent  implements OnInit {
   }
   ngOnInit(): void {
    
+    // this.getCategory()
     if(this.data != null ){
       this.edit = true
    
+
     this.cProduct = this.data
     
     }
@@ -67,6 +73,14 @@ export class ProductDialogComponent  implements OnInit {
 
   }
 
+
+  // getCategory(){
+  //  this.categoryService.Getall().subscribe(data =>{ 
+  //  this.ListCategory = data;
+
+
+  //  })
+  // }
 
 
 }

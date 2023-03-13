@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="Container-title-dialog">
 <h1   *ngIf ="edit == false"class="title">Crear Producto</h1>
 <h1   *ngIf ="edit == true"class="title"> Editar Producto</h1>
@@ -28,13 +28,30 @@
       
     <mat-form-field  class="example-full-width">
         <mat-label>Categoria</mat-label>
-        <input matInput placeholder=""  name="idCategory"  required id="idCategory" [(ngModel)]="cProduct.idCategory"/>
+      <mat-select   >
+                <mat-option>Selecione Categoria </mat-option>
+                <mat-option *ngFor="let Category  of   ListCategory  " [value]="Category.IdCategory">{{Category.NameCategory}}</mat-option>                    
+            </mat-select> -->
+        <!-- <input matInput placeholder=""  name="idCategory"  required id="idCategory" [(ngModel)]="cProduct.idCategory"/>
       </mat-form-field>
+
+
 
  
       <button  *ngIf ="edit == false"  [disabled]="myForm.invalid" type="submit" class="send-product"> Crear </button>
       <button  *ngIf ="edit == true" [disabled]="myForm.invalid" type="submit" class="send-product"> Editar </button>
   </form>
     
+</div> -->
+
+
+<h1 mat-dialog-title>Confirmación</h1>
+<div mat-dialog-content>
+	<p style="text-align: justify;">Lo sentimos pero no existen vuelos con sillas a seleccionar disponibles en el paquete
+		e itinerario seleccionado, por
+		favor intente otro itinerario</p>
+	<p>¿Deseas Continuar?</p>
 </div>
+<div mat-dialog-actions>
+</div> 
 
