@@ -7,16 +7,17 @@ import { ProductDialogComponent } from './Components/product-dialog/product-dial
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { AppComponent } from './app.component';
 import { MatIconModule } from '@angular/material/icon';
-
 import {MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-
 import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from "ngx-spinner";
+import {MatSelectModule} from '@angular/material/select';
+
+
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { NgxSpinnerModule } from "ngx-spinner";
     HttpClientModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatSelectModule
+
    
   ],
   providers: [

@@ -98,6 +98,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
     "analytics": "c4456d73-133e-4cc2-a0e4-ccf1af4c6cf6"
+=======
+    "analytics": "22023f00-0832-4e79-b818-3073c6c847e2"
+>>>>>>> ajusteModal
   }
 }

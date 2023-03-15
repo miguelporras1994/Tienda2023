@@ -5,12 +5,8 @@
 </div>
 <div class="Content-Modifed">
 
-    
-
-
 <form  (ngSubmit)="eventForm()" #myForm="ngForm" class="example-form">
-
-
+      
     <mat-form-field  class="example-full-width">
         <mat-label>Nombre Producto</mat-label>
         <input matInput placeholder="Carro"  name="nameProduct"  required id="nameProduct" [(ngModel)]="cProduct.nameProduct">
@@ -27,9 +23,16 @@
       </mat-form-field>
       
     <mat-form-field  class="example-full-width">
-        <mat-label>Categoria</mat-label>
-        <input matInput placeholder=""  name="idCategory"  required id="idCategory" [(ngModel)]="cProduct.idCategory"/>
+       <mat-label>  Selecione Categoria  </mat-label> 
+      <mat-select 
+    
+      [(value)]="cProduct.idCategory" > 
+               <mat-option>Selecione Categoria </mat-option>
+                <mat-option *ngFor="let Category  of   ListCategory "  [value]="Category.idCategory">{{Category.nameCategory}}</mat-option>                    
+            </mat-select> 
       </mat-form-field>
+
+
 
  
       <button  *ngIf ="edit == false"  [disabled]="myForm.invalid" type="submit" class="send-product"> Crear </button>

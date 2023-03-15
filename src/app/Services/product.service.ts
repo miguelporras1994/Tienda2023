@@ -27,7 +27,7 @@ export class ProductService {
 
 
   Edit(data : Product){
-    return this.Http.put(this.ApiUrl , data)
+    return this.Http.put(`${this.ApiUrl}/${data.idProduct}` , data)
   }
 
   Delete (Id : number){

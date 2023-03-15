@@ -3,7 +3,10 @@ import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Product } from 'src/app/Models/Product.model';
 import {ProductService} from '../../Services/product.service'
+import {CategoryService} from '../../Services/category.services'
+
 import { NgxSpinnerService } from 'ngx-spinner';
+import { Category } from 'src/app/Models/Category.model';
 
 @Component({
   selector: 'app-product-dialog',
@@ -13,6 +16,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class ProductDialogComponent  implements OnInit {
 
   cProduct : Product  = new Product();
+  ListCategory : Category[]   = []
 
   edit : boolean = false
 
@@ -22,6 +26,7 @@ export class ProductDialogComponent  implements OnInit {
 
   constructor(
     private productService :  ProductService ,
+    private categoryService : CategoryService,
     public dialogRef: MatDialogRef<ProductDialogComponent>,
     private spinner: NgxSpinnerService,
     @Inject(MAT_DIALOG_DATA) public data: Product 
@@ -31,9 +36,11 @@ export class ProductDialogComponent  implements OnInit {
   }
   ngOnInit(): void {
    
+    this.getCategory()
     if(this.data != null ){
       this.edit = true
    
+
     this.cProduct = this.data
     
     }
@@ -49,6 +56,7 @@ export class ProductDialogComponent  implements OnInit {
 
   CreateProduct(){
     this.spinner.show();
+    console.log("producto", this.cProduct)
     this.productService.Create(this.cProduct).subscribe(data => {
 
       this.spinner.hide();
@@ -59,6 +67,7 @@ export class ProductDialogComponent  implements OnInit {
 
   editProduct(){
      this.spinner.show()
+     console.log("producto edit", this.cProduct)
     this.productService.Edit(this.cProduct).subscribe(data =>{
       this.cProduct = new Product()
       this.spinner.hide()
@@ -67,6 +76,17 @@ export class ProductDialogComponent  implements OnInit {
 
   }
 
+
+  getCategory(){
+   this.categoryService.Getall().subscribe(data =>{ 
+   this.ListCategory = data;
+
+
+   console.log("Category", this.ListCategory)
+
+
+   })
+  }
 
 
 }
