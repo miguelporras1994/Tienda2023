@@ -1,0 +1,7 @@
+
+
+
+<div  class="product--grid">
+
+<app-product-client [product]="item" *ngFor="let item of Products" (CartProducts)="cartstore($event)" ></app-product-client>
+</div>

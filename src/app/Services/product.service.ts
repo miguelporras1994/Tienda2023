@@ -11,6 +11,8 @@ export class ProductService {
 
  private ApiUrl ='https://localhost:7173/Api/Product'
 
+//  private ApiUrl  = 'https://apitienda.azurewebsites.net/Api/Product'
+
   GetallProduct(){
   
    var prueba =  this.Http.get<Product[]>(this.ApiUrl)

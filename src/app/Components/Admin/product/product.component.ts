@@ -1,11 +1,11 @@
 
 import {  AfterViewInit, Component, ViewChild} from '@angular/core';
 import { Product } from 'src/app/Models/Product.model';
-import {ProductService} from '../../Services/product.service'
+import {ProductService} from '../../../Services/product.service'
 import Swal from 'sweetalert2';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { MatDialog } from '@angular/material/dialog';
-import { ProductDialogComponent } from '../product-dialog/product-dialog.component';
+import { ProductDialogComponent } from '../../Admin/product-dialog/product-dialog.component';
 import { Router } from '@angular/router';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';

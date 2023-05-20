@@ -10,6 +10,7 @@ export class CategoryService {
   constructor(private Http : HttpClient) { }
 
  private ApiUrl ='https://localhost:7173/Api/Category'
+//  private ApiUrl  = 'https://apitienda.azurewebsites.net/Api/Category'
 
   Getall(){
   

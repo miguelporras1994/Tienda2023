@@ -2,8 +2,8 @@ import { Component, OnInit , Input, Inject} from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Product } from 'src/app/Models/Product.model';
-import {ProductService} from '../../Services/product.service'
-import {CategoryService} from '../../Services/category.services'
+import {ProductService} from '../../../Services/product.service'
+import {CategoryService} from '../../../Services/category.services'
 
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Category } from 'src/app/Models/Category.model';
@@ -13,7 +13,7 @@ import { Category } from 'src/app/Models/Category.model';
   templateUrl: './product-dialog.component.html',
   styleUrls: ['./product-dialog.component.css']
 })
-export class ProductDialogComponent  implements OnInit {
+export class ProductDialogComponent   {
 
   cProduct : Product  = new Product();
   ListCategory : Category[]   = []

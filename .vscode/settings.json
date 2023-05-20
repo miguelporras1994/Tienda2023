@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/1eac53ee-6b0d-4fdf-bcbd-abe24caa7808/resourceGroups/Miguel/providers/Microsoft.Web/sites/FrotendTienda",
+    "appService.deploySubpath": "dist\\tienda"
+}

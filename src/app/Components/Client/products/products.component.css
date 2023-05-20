@@ -1,0 +1,36 @@
+
+
+
+
+ .product--grid {
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr) ;
+    grid-gap:  15px;}
+
+
+  
+  /* On screens that are 992px wide or less, the background color is blue */
+  @media screen  and (min-width: 600px) and (max-width: 992px) {
+    
+    body {
+        background-color: blue;
+        color: white;
+      }
+        .product--grid {
+            display: grid;
+            grid-template-columns: repeat(4 , 1fr) ;
+            grid-gap:  15px;
+         }
+    }
+  
+  
+  /* On screens that are 600px wide or less, the background color is olive */
+  @media screen and (max-width: 600px) {
+ 
+    .product--grid {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+
